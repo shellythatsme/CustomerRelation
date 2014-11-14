@@ -1,0 +1,40 @@
+// Place all the styles related to the Customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  width: 800px;
+  margin: auto;
+  background-color: #DDDDDD;
+}
+
+h1 {
+  padding-left: 13px;
+}
+
+.customer {
+  border: 1px solid  black;
+  width: 266px;
+  height: 410px;
+  padding-left: 13px;
+  float: left;
+  margin: 15px;
+  box-shadow: 2px 3px 2px #888888;
+  background-color: white;
+}
+p {
+  font-size: 12px;  
+}
+
+.edit {
+  margin-left:218px ;
+}
+
+.delete {
+  margin-left: 245px;
+  margin-top: -31px;
+}
+
+img{
+  width: 90px;
+}

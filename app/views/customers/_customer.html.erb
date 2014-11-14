@@ -1,0 +1,13 @@
+<div class="customer">
+  <p class="edit">
+    <%= link_to 'Edit', edit_customer_path(customer) %>
+  </p> 
+  <p class="delete">
+    <%= link_to 'x', customer, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+  <h2><%= customer.fullName %></h2>
+  <% unless customer.phoneNumber.length.zero? %><%= image_tag customer.image %><% end %>
+  <% unless customer.phoneNumber.length.zero? %><p>Phone: <%= customer.phoneNumber %></p><% end %>
+  <% unless customer.email.length.zero? %><p>Email: <a href="<%= customer.email%>"> <%= customer.email%></a></p><% end %>
+  <% unless customer.notes.length.zero? %><p>Notes: <%= customer.notes%></p><% end %>
+</div>

@@ -1,0 +1,5 @@
+<div class="customer">
+  <p>edit</p><p>x</p>
+  <h1><%= fullName %></h1>
+  <% image_tag("image") %>
+</div>
