@@ -6,8 +6,27 @@
     <%= link_to 'x', customer, method: :delete, data: { confirm: 'Are you sure?' } %>
   </p>
   <h2><%= customer.fullName %></h2>
-  <% unless customer.image.length.zero? %><%= image_tag customer.image %><% end %>
-  <% unless customer.phoneNumber.length.zero? %><p>Phone: <%= customer.phoneNumber %></p><% end %>
-  <% unless customer.email.length.zero? %><p>Email: <a href="<%= customer.email%>"> <%= customer.email%></a></p><% end %>
-  <% unless customer.notes.length.zero? %><p>Notes: <%= customer.notes%></p><% end %>
+  <!-- Check to see if the image has been set to something if not don't show it -->
+  <% unless customer.image.length.zero? %>
+    <%= image_tag customer.image %>
+  <% end %>
+  <!-- Check to see if the phone number has been set if it isn't don't show it -->
+  <% unless customer.phoneNumber.length.zero? %>
+    <p>
+      Phone: <%= customer.phoneNumber %>
+    </p>
+  <% end %>
+  <!-- Check to see if they customer has a email if they do display it -->
+  <% unless customer.email.length.zero? %>
+    <p>
+      Email: <a href="<%= customer.email%>"> <%= customer.email%></a>
+    </p>
+  <% end %>
+  <!-- Check if the user has notes --> 
+  <% unless customer.notes.length.zero? %>
+    <p>
+      Notes: <%= customer.notes %>
+    </p>
+  <% end %>
+
 </div>

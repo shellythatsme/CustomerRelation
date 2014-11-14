@@ -1,0 +1,13 @@
+<html>
+  <title>Show all Customers</title>
+  <body>
+    <h1>All customers<h1>
+      <nav>
+        <ul>
+          <li><%= link_to "Alphabetized", 'alphabetized' %></li>
+          <li><%= link_to "Missing Email", 'missing_email' %></li>
+        </ul>
+      </nav>
+      <%= render partial: '/customers/customer', collection: @customers %>
+  </body>
+</html>
