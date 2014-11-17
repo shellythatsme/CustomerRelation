@@ -28,5 +28,10 @@
       Notes: <%= customer.notes %>
     </p>
   <% end %>
+  <% unless customer.province_id.length.zero? %>
+  <p>
+    Province: <%= customer.Province_id %>
+  </p>
+  <% end %>
 
 </div>
